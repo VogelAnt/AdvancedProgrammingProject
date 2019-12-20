@@ -1,21 +1,26 @@
 #ifndef MAINMENU_H
 #define MAINMENU_H
-
-#include <QMainWindow>
+#include "GameMenu.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainMenu; }
+namespace Ui {
+class MainMenu;
+}
 QT_END_NAMESPACE
 
-class MainMenu : public QMainWindow
-{
-    Q_OBJECT
+class MainMenu : public QMainWindow {
+  Q_OBJECT
 
 public:
-    MainMenu(QWidget *parent = nullptr);
-    ~MainMenu();
+  MainMenu(QWidget *parent = nullptr);
+  ~MainMenu();
 
 private:
-    Ui::MainMenu *ui;
+  Ui::MainMenu *ui;
+  QWidget *m_centralWidget = nullptr;
+  QVBoxLayout *m_menuLayout = nullptr;
+  QPushButton *m_newGamebutton = nullptr;
+  QPushButton *m_loadButton = nullptr;
+  QPushButton *m_exitButton = nullptr;
 };
 #endif // MAINMENU_H
