@@ -25,11 +25,15 @@ void MainMenu::Initialize() {
   m_centralWidget->setLayout(m_menuLayout);
 }
 
-void MainMenu::on_newButtonClicked() {}
+void MainMenu::on_newButtonClicked() {
+  this->hide();
+  m_gameMenu = new GameMenu();
+  m_gameMenu->show();
+}
 
 void MainMenu::on_loadButtonclicked() {}
 
-void MainMenu::on_exitButtonclicked() {}
+void MainMenu::on_exitButtonclicked() { this->close(); }
 
 MainMenu::~MainMenu() {
   delete ui;
@@ -37,4 +41,5 @@ MainMenu::~MainMenu() {
   delete m_loadButton;
   delete m_exitButton;
   delete m_menuLayout;
+  delete m_gameMenu;
 }

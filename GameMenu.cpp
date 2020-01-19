@@ -1,6 +1,3 @@
 #include "GameMenu.h"
 
-GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent)
-{
-
-}
+GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent) {}

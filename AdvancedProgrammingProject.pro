@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     GameMenu.cpp \
+    Player.cpp \
     main.cpp \
     MainMenu.cpp
 
 HEADERS += \
     GameMenu.h \
-    MainMenu.h
+    MainMenu.h \
+    Player.h
 
 FORMS += \
     MainMenu.ui

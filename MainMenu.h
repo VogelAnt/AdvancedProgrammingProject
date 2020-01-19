@@ -29,5 +29,6 @@ private:
   QPushButton *m_newGamebutton = nullptr;
   QPushButton *m_loadButton = nullptr;
   QPushButton *m_exitButton = nullptr;
+  GameMenu *m_gameMenu = nullptr;
 };
 #endif // MAINMENU_H
