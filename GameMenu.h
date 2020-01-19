@@ -16,6 +16,8 @@
 #include <iostream>
 #include <ostream>
 
+// Initial commit
+
 class GameMenu : public QMainWindow {
   Q_OBJECT
 public:
