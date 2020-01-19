@@ -15,6 +15,13 @@ public:
   MainMenu(QWidget *parent = nullptr);
   ~MainMenu();
 
+  void Initialize();
+
+public slots:
+  void on_newButtonClicked();
+  void on_loadButtonclicked();
+  void on_exitButtonclicked();
+
 private:
   Ui::MainMenu *ui;
   QWidget *m_centralWidget = nullptr;
