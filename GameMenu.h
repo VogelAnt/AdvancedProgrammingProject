@@ -24,6 +24,9 @@ public:
 signals:
 
 public slots:
+
+private:
+  QPushButton *m_
 };
 
 #endif // GAMEMENU_H
