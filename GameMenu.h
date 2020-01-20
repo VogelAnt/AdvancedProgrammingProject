@@ -1,6 +1,7 @@
 #ifndef GAMEMENU_H
 #define GAMEMENU_H
 
+#include "Player.h"
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QLCDNumber>
@@ -9,7 +10,6 @@
 #include <QObject>
 #include <QPushButton>
 #include <QVBoxLayout>
-
 #include <QWidget>
 
 #include <fstream>
@@ -20,13 +20,18 @@ class GameMenu : public QMainWindow {
   Q_OBJECT
 public:
   explicit GameMenu(QWidget *parent = nullptr);
-
+  void InitializeGameMenu();
 signals:
 
 public slots:
 
 private:
-  QPushButton *m_
+  Player *m_player = nullptr;
+  QLCDNumber *m_healthDisplay = nullptr;
+  QPushButton *m_fightButton = nullptr;
+  QPushButton *m_showStatsbutton = nullptr;
+  QPushButton *m_saveButton = nullptr;
+  QPushButton *m_exitButton = nullptr;
 };
 
 #endif // GAMEMENU_H

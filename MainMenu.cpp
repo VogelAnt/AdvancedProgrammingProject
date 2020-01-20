@@ -4,7 +4,7 @@
 MainMenu::MainMenu(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainMenu) {
   ui->setupUi(this);
-  Initialize();
+  InitializeMainMenu();
   connect(m_newGamebutton, &QPushButton::clicked, this,
           &MainMenu::on_newButtonClicked);
   connect(m_loadButton, &QPushButton::clicked, this,
@@ -13,7 +13,7 @@ MainMenu::MainMenu(QWidget *parent)
           &MainMenu::on_exitButtonclicked);
 }
 
-void MainMenu::Initialize() {
+void MainMenu::InitializeMainMenu() {
   m_centralWidget = centralWidget();
   m_menuLayout = new QVBoxLayout(m_centralWidget);
   m_newGamebutton = new QPushButton("New Game", this);
