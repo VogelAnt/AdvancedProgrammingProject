@@ -9,6 +9,10 @@ public:
   Player();
   Player(int health, QString name, bool alive);
 
+  int getHealth() { return m_health; }
+  QString getName() { return m_playerName; }
+  bool getAlive() { return m_playerAlive; }
+
 private:
   int m_health;
   QString m_playerName;

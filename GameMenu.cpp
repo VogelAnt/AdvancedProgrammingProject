@@ -8,4 +8,10 @@ GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent) {
   InitializeGameMenu();
 }
 
-void GameMenu::InitializeGameMenu() {}
+void GameMenu::InitializeGameMenu() {
+  m_healthDisplay = new QLCDNumber(m_player->getHealth(), this);
+  m_fightButton = new QPushButton("Fight", this);
+  m_showStatsbutton = new QPushButton("Show Stats", this);
+  m_saveButton = new QPushButton("Save Game", this);
+  m_exitButton = new QPushButton("Exit Game", this);
+}
