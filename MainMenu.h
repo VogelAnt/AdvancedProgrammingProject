@@ -15,7 +15,7 @@ public:
   MainMenu(QWidget *parent = nullptr);
   ~MainMenu();
 
-  void Initialize();
+  void InitializeMainMenu();
 
 public slots:
   void on_newButtonClicked();
