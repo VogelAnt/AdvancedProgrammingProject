@@ -6,7 +6,6 @@
 
 class Player {
 public:
-  Player();
   Player(int health, QString name, bool alive);
 
   int getHealth() { return m_health; }

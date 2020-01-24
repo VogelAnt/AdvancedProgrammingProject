@@ -2,6 +2,7 @@
 #define GAMEMENU_H
 
 #include "Player.h"
+#include <QDebug>
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QLCDNumber>
@@ -22,17 +23,20 @@ class GameMenu : public QMainWindow {
 public:
   explicit GameMenu(QWidget *parent = nullptr);
   void InitializeGameMenu();
+  ~GameMenu();
 signals:
 
 public slots:
 
 private:
   Player *m_player = nullptr;
+  QWidget *m_centralWidget = nullptr;
   QLCDNumber *m_healthDisplay = nullptr;
   QPushButton *m_fightButton = nullptr;
   QPushButton *m_showStatsbutton = nullptr;
   QPushButton *m_saveButton = nullptr;
   QPushButton *m_exitButton = nullptr;
+  QVBoxLayout *m_gameMenulayout = nullptr;
 };
 
 #endif // GAMEMENU_H

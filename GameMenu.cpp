@@ -9,9 +9,22 @@ GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent) {
 }
 
 void GameMenu::InitializeGameMenu() {
-  m_healthDisplay = new QLCDNumber(m_player->getHealth(), this);
-  m_fightButton = new QPushButton("Fight", this);
-  m_showStatsbutton = new QPushButton("Show Stats", this);
-  m_saveButton = new QPushButton("Save Game", this);
-  m_exitButton = new QPushButton("Exit Game", this);
+  m_centralWidget = new QWidget(this);
+  m_gameMenulayout = new QVBoxLayout(m_centralWidget);
+  m_healthDisplay = new QLCDNumber(m_centralWidget);
+  m_healthDisplay->setDecMode();
+  m_healthDisplay->display(m_player->getHealth());
+  m_healthDisplay->setStyleSheet("color : red");
+  m_fightButton = new QPushButton("Fight", m_centralWidget);
+  m_showStatsbutton = new QPushButton("Show Stats", m_centralWidget);
+  m_saveButton = new QPushButton("Save Game", m_centralWidget);
+  m_exitButton = new QPushButton("Exit Game", m_centralWidget);
+  m_gameMenulayout->addWidget(m_healthDisplay);
+  m_gameMenulayout->addWidget(m_fightButton);
+  m_gameMenulayout->addWidget(m_showStatsbutton);
+  m_gameMenulayout->addWidget(m_saveButton);
+  m_gameMenulayout->addWidget(m_exitButton);
+  setCentralWidget(m_centralWidget);
 }
+
+GameMenu::~GameMenu() { delete m_centralWidget; }
