@@ -17,7 +17,7 @@
 #include <iostream>
 #include <ostream>
 
-// sdkufhdkfdkjfejh
+// TODO: finish the menu lol
 class GameMenu : public QMainWindow {
   Q_OBJECT
 public:
