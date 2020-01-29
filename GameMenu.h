@@ -17,7 +17,6 @@
 #include <iostream>
 #include <ostream>
 
-// TODO: finish the menu lol
 class GameMenu : public QMainWindow {
   Q_OBJECT
 public:
@@ -27,16 +26,19 @@ public:
 signals:
 
 public slots:
-
+public:
 private:
   Player *m_player = nullptr;
   QWidget *m_centralWidget = nullptr;
+  QWidget *m_statusWidget = nullptr;
+  QLabel *m_playerLabel = nullptr;
   QLCDNumber *m_healthDisplay = nullptr;
   QPushButton *m_fightButton = nullptr;
   QPushButton *m_showStatsbutton = nullptr;
   QPushButton *m_saveButton = nullptr;
   QPushButton *m_exitButton = nullptr;
   QVBoxLayout *m_gameMenulayout = nullptr;
+  QHBoxLayout *m_statuslayout = nullptr;
 };
 
 #endif // GAMEMENU_H

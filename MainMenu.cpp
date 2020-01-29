@@ -27,7 +27,8 @@ void MainMenu::InitializeMainMenu() {
 
 void MainMenu::on_newButtonClicked() {
   this->hide();
-  m_gameMenu = new GameMenu();
+  m_gameMenu = new GameMenu(this);
+  //  connect(m_gameMenu, &GameMenu::)
   m_gameMenu->show();
 }
 
@@ -37,9 +38,6 @@ void MainMenu::on_exitButtonclicked() { this->close(); }
 
 MainMenu::~MainMenu() {
   delete ui;
-  delete m_newGamebutton;
-  delete m_loadButton;
-  delete m_exitButton;
-  delete m_menuLayout;
-  delete m_gameMenu;
+  delete m_centralWidget;
+  qDebug() << "MainMenu succesfully destroyed";
 }
