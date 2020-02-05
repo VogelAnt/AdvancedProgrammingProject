@@ -23,10 +23,7 @@ public:
   explicit GameMenu(QWidget *parent = nullptr);
   void InitializeGameMenu();
   ~GameMenu();
-signals:
 
-public slots:
-public:
 private:
   Player *m_player = nullptr;
   QWidget *m_centralWidget = nullptr;
