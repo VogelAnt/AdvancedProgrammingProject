@@ -24,6 +24,9 @@ public:
   void InitializeGameMenu();
   ~GameMenu();
 
+public slots:
+  void on_BackToMainMenu();
+
 private:
   Player *m_player = nullptr;
   QWidget *m_centralWidget = nullptr;
