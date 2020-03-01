@@ -27,6 +27,9 @@ public:
 public slots:
   void on_BackToMainMenu();
 
+public:
+  QPushButton *m_backTomenubutton = nullptr;
+
 private:
   Player *m_player = nullptr;
   QWidget *m_centralWidget = nullptr;

@@ -21,12 +21,16 @@ public slots:
   void on_newButtonClicked();
   void on_loadButtonclicked();
   void on_exitButtonclicked();
+  void on_continueButtonclicked();
+  void on_saveGameProgress();
+  void on_BackToMainMenu();
 
 private:
   Ui::MainMenu *ui;
   QWidget *m_centralWidget = nullptr;
   QVBoxLayout *m_menuLayout = nullptr;
   QPushButton *m_newGamebutton = nullptr;
+  QPushButton *m_continueGamebutton = nullptr;
   QPushButton *m_loadButton = nullptr;
   QPushButton *m_exitButton = nullptr;
   GameMenu *m_gameMenu = nullptr;

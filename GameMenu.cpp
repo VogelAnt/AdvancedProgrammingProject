@@ -9,8 +9,8 @@ GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent) {
     m_player = new Player(100, name, true);
     InitializeGameMenu();
     connect(m_exitButton, &QPushButton::clicked, this, &GameMenu::close);
-    connect(m_backTomenubutton, &QPushButton::clicked, this,
-            &GameMenu::on_BackToMainMenu);
+    //    connect(m_backTomenubutton, &QPushButton::clicked, this,
+    //            &GameMenu::on_BackToMainMenu);
   } else {
     qDebug() << "GameMenu closed";
     this->close();
