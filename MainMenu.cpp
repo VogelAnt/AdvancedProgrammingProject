@@ -58,6 +58,7 @@ void MainMenu::on_BackToMainMenu() {
   m_gameMenu->hide();
   this->show();
   m_continueGamebutton->show();
+  m_newGamebutton->setDisabled(true);
 }
 
 void MainMenu::on_saveGameProgress() {}

@@ -27,6 +27,7 @@ public slots:
 
 private:
   Ui::MainMenu *ui;
+  bool m_existingGame;
   QWidget *m_centralWidget = nullptr;
   QVBoxLayout *m_menuLayout = nullptr;
   QPushButton *m_newGamebutton = nullptr;

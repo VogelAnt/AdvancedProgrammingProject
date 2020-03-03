@@ -9,8 +9,9 @@ GameMenu::GameMenu(QWidget *parent) : QMainWindow(parent) {
     m_player = new Player(100, name, true);
     InitializeGameMenu();
     connect(m_exitButton, &QPushButton::clicked, this, &GameMenu::close);
-    //    connect(m_backTomenubutton, &QPushButton::clicked, this,
-    //            &GameMenu::on_BackToMainMenu);
+    connect(m_showStatsbutton, &QPushButton::clicked, this,
+            &GameMenu::on_DisplayStatus);
+    connect(m_fightButton, &QPushButton::clicked, this, &GameMenu::on_Fight);
   } else {
     qDebug() << "GameMenu closed";
     this->close();
@@ -41,10 +42,23 @@ void GameMenu::InitializeGameMenu() {
   m_gameMenulayout->addWidget(m_saveButton);
   m_gameMenulayout->addWidget(m_backTomenubutton);
   m_gameMenulayout->addWidget(m_exitButton);
+  m_statusWidget->setHidden(m_statusDisplay);
   setCentralWidget(m_centralWidget);
 }
 
 void GameMenu::on_BackToMainMenu() { this->hide(); }
+
+void GameMenu::on_DisplayStatus() {
+  m_statusDisplay = !m_statusDisplay;
+  m_statusWidget->setHidden(m_statusDisplay);
+  if (m_statusDisplay) {
+    m_showStatsbutton->setText("Show Stats");
+  } else {
+    m_showStatsbutton->setText("Hide Stats");
+  }
+}
+
+void GameMenu::on_Fight() { m_player->addDays(); }
 
 GameMenu::~GameMenu() {
   qDebug() << "GameMenu succesfully destroyed";

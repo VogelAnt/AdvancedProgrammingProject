@@ -26,11 +26,14 @@ public:
 
 public slots:
   void on_BackToMainMenu();
+  void on_DisplayStatus();
+  void on_Fight();
 
 public:
   QPushButton *m_backTomenubutton = nullptr;
 
 private:
+  bool m_statusDisplay = true;
   Player *m_player = nullptr;
   QWidget *m_centralWidget = nullptr;
   QWidget *m_statusWidget = nullptr;

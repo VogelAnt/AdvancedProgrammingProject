@@ -16,15 +16,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Enemy.cpp \
     GameMenu.cpp \
     Player.cpp \
+    PlayerStats.cpp \
     main.cpp \
     MainMenu.cpp
 
 HEADERS += \
+    Enemy.h \
     GameMenu.h \
     MainMenu.h \
-    Player.h
+    Player.h \
+    PlayerStats.h
 
 FORMS += \
     MainMenu.ui
